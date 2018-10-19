@@ -1,11 +1,11 @@
 import java.io.{BufferedReader, InputStreamReader}
 
-name         := "XMLCalabash2Template"
+name         := "xmlcalabash2-template"
 organization := "com.xmlcalabash.demo"
 version      := "1.0.0"
 scalaVersion := "2.12.6"
 
-lazy val xmlCalabashVersion = "1.9.12"
+lazy val xmlCalabashVersion = "1.9.15"
 
 buildInfoKeys ++= Seq[BuildInfoKey](
   "versopm" -> version,
@@ -35,11 +35,14 @@ resolvers += "Artima Maven Repository" at "http://repo.artima.com/releases"
 resolvers += "Restlet" at "http://maven.restlet.com"
 resolvers += "My Maven Repository" at "https://nwalsh.com/maven/repo"
 resolvers += "Local Maven Repository" at "file:///space/websites/nwalsh.com/build/website/maven/repo"
+resolvers += "Private Repository" at "https://nwalsh.com/build/website/maven/repo"
 
 libraryDependencies ++= Seq(
   "org.apache.logging.log4j" % "log4j-api" % "2.11.0",
   "org.apache.logging.log4j" % "log4j-core" % "2.11.0",
   "org.apache.logging.log4j" % "log4j-slf4j-impl" % "2.11.0",
+  "org.scalactic" %% "scalactic" % "3.0.5",
+  "org.scalatest" %% "scalatest" % "3.0.5" % "test",
   "org.slf4j" % "jcl-over-slf4j" % "1.7.25",
   "org.slf4j" % "slf4j-api" % "1.7.25",
   "net.sf.saxon" % "Saxon-HE" % "9.8.0-14",
